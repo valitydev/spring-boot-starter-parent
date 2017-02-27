@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <groupId>com.rbkmoney</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.1.RELEASE</version>
+    <version>1.5.1.RELEASE-1</version>
     <description>RBKmoney parent pom</description>
     <distributionManagement>
         <downloadUrl>
