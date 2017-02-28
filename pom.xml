@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <groupId>com.rbkmoney</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.1.RELEASE</version>
+    <version>1.5.1.RELEASE-1</version>
     <description>RBKmoney parent pom</description>
     <distributionManagement>
         <downloadUrl>
@@ -37,6 +37,17 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>3.0.1</version>
@@ -48,6 +59,13 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <configuration>
+                    <generateGitPropertiesFile>false</generateGitPropertiesFile>
+                </configuration>
             </plugin>
         </plugins>
         <pluginManagement>
