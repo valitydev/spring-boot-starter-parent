@@ -9,7 +9,6 @@ build('spring-boot-starter-parent', 'docker-host') {
     }
 
 
-    def buildImageTag = "fcf116dd775cc2e91bffb6a36835754e3f2d5321"
+    def buildImageTag = "442c2c274c1d8e484e5213089906a4271641d95e"
     javaLibPipeline(buildImageTag)
 }
-
