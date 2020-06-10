@@ -9,7 +9,7 @@
   <packaging>pom</packaging>
   <groupId>com.rbkmoney</groupId>
   <artifactId>spring-boot-starter-parent</artifactId>
-  <version>2.3.0.RELEASE</version>
+  <version>2.3.0.RELEASE-1</version>
   <description>RBKmoney spring boot starter parent</description>
   <name>RBKmoney spring boot starter parent</name>
   <url>https://github.com/rbkmoney/spring-boot-starter-parent</url>
@@ -49,6 +49,12 @@
   <profiles>
     <profile>
       <id>private</id>
+      <activation>
+        <property>
+          <name>env.MVN_PROFILE</name>
+          <value>private</value>
+        </property>
+      </activation>
       <distributionManagement>
         <snapshotRepository>
           <id>${privSnapRepoId}</id>
@@ -94,6 +100,12 @@
     </profile>
     <profile>
       <id>public</id>
+      <activation>
+        <property>
+          <name>env.MVN_PROFILE</name>
+          <value>public</value>
+        </property>
+      </activation>
       <distributionManagement>
         <snapshotRepository>
           <id>${pubSnapRepoId}</id>
@@ -150,6 +162,11 @@
     </profile>
     <profile>
       <id>sign</id>
+      <activation>
+        <property>
+          <name>env.MVN_PROFILE</name>
+        </property>
+      </activation>
       <build>
         <plugins>
           <plugin>
@@ -180,6 +197,9 @@
       <id>common</id>
       <activation>
         <activeByDefault>true</activeByDefault>
+        <property>
+          <name>env.MVN_PROFILE</name>
+        </property>
       </activation>
       <build>
         <plugins>
