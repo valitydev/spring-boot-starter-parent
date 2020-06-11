@@ -9,7 +9,7 @@
   <packaging>pom</packaging>
   <groupId>com.rbkmoney</groupId>
   <artifactId>spring-boot-starter-parent</artifactId>
-  <version>2.3.0.RELEASE-1</version>
+  <version>2.3.0.RELEASE-2</version>
   <description>RBKmoney spring boot starter parent</description>
   <name>RBKmoney spring boot starter parent</name>
   <url>https://github.com/rbkmoney/spring-boot-starter-parent</url>
@@ -155,6 +155,9 @@
               <serverId>${pubStagingRepoId}</serverId>
               <nexusUrl>${pubStagingRepo}</nexusUrl>
               <autoReleaseAfterClose>${autoReleaseAfterClose}</autoReleaseAfterClose>
+              <stagingProgressTimeoutMinutes>${stagingProgressTimeoutMinutes}</stagingProgressTimeoutMinutes>
+              <keepStagingRepositoryOnCloseRuleFailure>${keepStagingRepositoryOnCloseRuleFailure}</keepStagingRepositoryOnCloseRuleFailure>
+              <keepStagingRepositoryOnFailure>${keepStagingRepositoryOnFailure}</keepStagingRepositoryOnFailure>
             </configuration>
           </plugin>
         </plugins>
@@ -232,6 +235,7 @@
             <artifactId>git-commit-id-plugin</artifactId>
             <configuration>
               <generateGitPropertiesFile>false</generateGitPropertiesFile>
+              <offline>true</offline>
             </configuration>
           </plugin>
         </plugins>
