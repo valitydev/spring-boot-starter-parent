@@ -249,6 +249,8 @@
                 <exclude>**/domain/**/*</exclude>>
                 <exclude>**/dto/**/*</exclude>>
                 <exclude>**/enums/**/*</exclude>>
+                <exclude>**/property/**/*</exclude>>
+                <exclude>**/properties/**/*</exclude>>
                 <exclude>**/exception/**/*</exclude>>
                 <exclude>**/config/**/*</exclude>>
                 <exclude>**/servlet/**/*</exclude>>
