@@ -243,6 +243,19 @@
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.5</version>
+            <configuration>
+              <excludes>
+                <exclude>**/model/**/*</exclude>>
+                <exclude>**/domain/**/*</exclude>>
+                <exclude>**/dto/**/*</exclude>>
+                <exclude>**/enums/**/*</exclude>>
+                <exclude>**/property/**/*</exclude>>
+                <exclude>**/properties/**/*</exclude>>
+                <exclude>**/exception/**/*</exclude>>
+                <exclude>**/config/**/*</exclude>>
+                <exclude>**/servlet/**/*</exclude>>
+              </excludes>
+            </configuration>
             <executions>
               <execution>
                 <id>prepare-agent</id>
@@ -252,6 +265,7 @@
               </execution>
               <execution>
                 <id>report</id>
+                <phase>test</phase>
                 <goals>
                   <goal>report</goal>
                 </goals>
