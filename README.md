@@ -1,2 +1,2 @@
-# spring-boot-starter-parent
-Базовый parent pom для spring java application
+# DEPRECATED
+Moved to [service-parent-pom](https://github.com/rbkmoney/service-parent-pom)
